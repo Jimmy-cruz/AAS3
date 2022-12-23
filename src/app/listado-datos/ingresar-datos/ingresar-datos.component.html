@@ -1,0 +1,23 @@
+<!-- <p>ingresar-datos works!</p> -->
+
+<!-- Componente de Ingreso de datos -->
+<div class="container">
+        <div class="row">
+            <!-- Input de ingreso de datos -->
+            <div class="">
+                <input type="text" class="form-control" placeholder="Javascript" size="30" #txtdato>
+            </div>
+            <!-- button para enviar los datos -->
+            <button (click)="addData(txtdato.value)" class="btn btn-circle btn-xl">
+                <p class="textoBoton">Add</p> 
+            </button>
+        </div>
+        <!-- Mostrar datos ingresados / no se logro enviarlos al componente de mostrar -->
+        <div class="row mostrar">
+            <ul>
+                <div *ngFor="let resDato of datos">
+                    <li>{{resDato}}</li>
+                </div>
+            </ul>
+        </div>
+</div>
